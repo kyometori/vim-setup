@@ -34,9 +34,12 @@ colorscheme deep-space
 syntax on
 
 " Key Maps
-map <C-n> :NERDTreeToggle<CR>
+map <silent> <C-n> :NERDTreeToggle<CR>
 map <C-_> I// <ESC>j0
 inoremap {<CR> {<CR>}<ESC>O
+
+" NERDTree settings
+let NERDTreeShowHidden=1
 
 " YCM settings
 set completeopt=menu,menuone
