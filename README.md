@@ -13,4 +13,7 @@ If you don't want to use it, please remove that line in the `.vimrc`.
 
 I won't tell you how to install it correctly because I don't even know but it just worked. Please follow any other reliable guide you found.
 
+# Contributing
+Don't open pull request and ruin my setup.
 
+If I don't like the changes I'll just close or ignore the pull request since it would directly affect my editor.
