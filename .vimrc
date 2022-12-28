@@ -10,6 +10,7 @@ set shiftwidth=2
 set expandtab
 set number relativenumber
 set path=.,/usr/include,,**
+set encoding=UTF-8
 
 " Vundle Settings
 set nocompatible
@@ -24,6 +25,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'tyrannicaltoucan/vim-deep-space'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 
@@ -51,3 +55,5 @@ let g:ycm_semantic_triggers =  {
 highlight PMenu ctermfg=0 ctermbg=39 guifg=black guibg=deepskyblue1
 highlight PMenuSel ctermfg=39 ctermbg=8 guifg=deepskyblue1 guibg=black
 
+" Airline settings
+let g:airline_theme='violet'
