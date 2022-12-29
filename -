@@ -61,7 +61,4 @@ highlight PMenuSel ctermfg=39 ctermbg=8 guifg=deepskyblue1 guibg=black
 let g:airline_theme='violet'
 
 " GitGutter settings
-let g:gitgutter_set_sign_backgrounds = 1
-highlight GitGutterAdd guifg=#00BD06 ctermfg=GREEN
-highlight GitGutterChange guifg=#27FDD2 ctermfg=CYAN
-highlight GitGutterDelete guifg=#EE5C28 ctermfg=RED
+highlight GitGutterAdd guifg=#00BD06 ctermfg=2
