@@ -17,7 +17,7 @@ set updatetime=100
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
@@ -25,7 +25,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Add plugins below this line
 Plugin 'preservim/nerdtree'
 Plugin 'ycm-core/YouCompleteMe'
-Plugin 'tyrannicaltoucan/vim-deep-space'
+Plugin 'sainnhe/everforest'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
@@ -36,7 +36,8 @@ call vundle#end()
 filetype plugin indent on
 
 " Color Schemes
-colorscheme deep-space
+set background=dark
+colorscheme everforest
 syntax on
 
 " Key Maps
