@@ -23,13 +23,17 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Add plugins below this line
+" Function Plugins
 Plugin 'preservim/nerdtree'
 Plugin 'ycm-core/YouCompleteMe'
-Plugin 'sainnhe/everforest'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-surround'
+" Custom Themes
+Plugin 'sainnhe/everforest'
+Plugin 'sonph/onehalf'
 
 call vundle#end()
 
@@ -37,6 +41,7 @@ filetype plugin indent on
 
 " Color Schemes
 set background=dark
+set termguicolors
 colorscheme everforest
 syntax on
 
@@ -66,3 +71,6 @@ let g:gitgutter_set_sign_backgrounds = 1
 highlight GitGutterAdd guifg=#00BD06 ctermfg=GREEN
 highlight GitGutterChange guifg=#27FDD2 ctermfg=CYAN
 highlight GitGutterDelete guifg=#EE5C28 ctermfg=RED
+
+" Color
+highlight LineNr guifg=#E2F9FF ctermfg=LightCyan
