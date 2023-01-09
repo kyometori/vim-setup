@@ -60,8 +60,8 @@ let g:ycm_semantic_triggers =  {
 			\ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
 			\ 'cs,lua,javascript': ['re!\w{2}'],
 			\ }
-highlight PMenu ctermfg=0 ctermbg=39 guifg=black guibg=deepskyblue1
-highlight PMenuSel ctermfg=39 ctermbg=8 guifg=deepskyblue1 guibg=black
+highlight PMenu ctermfg=0 ctermbg=10 guifg=black guibg=#4FBD65
+highlight PMenuSel ctermfg=10 ctermbg=8 guifg=#4FBD65 guibg=black
 
 " Airline settings
 let g:airline_theme='violet'
