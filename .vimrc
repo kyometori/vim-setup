@@ -48,6 +48,10 @@ syntax on
 " Key Maps
 map <silent> <C-n> :NERDTreeToggle<CR>
 map <C-_> I// <ESC>j0
+nnoremap <C-q> :m+<CR>
+nnoremap <C-j> :m-2<CR>
+inoremap <C-q> <ESC>:m+<CR>i
+inoremap <C-j> <ESC>:m-2<CR>i
 inoremap {<CR> {<CR>}<ESC>O
 
 " NERDTree settings
