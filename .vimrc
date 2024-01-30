@@ -33,7 +33,6 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
 " Custom Themes
 Plugin 'sainnhe/everforest'
-Plugin 'sonph/onehalf'
 
 call vundle#end()
 
@@ -66,6 +65,7 @@ let g:ycm_semantic_triggers =  {
 			\ }
 highlight PMenu ctermfg=0 ctermbg=10 guifg=black guibg=#4FBD65
 highlight PMenuSel ctermfg=10 ctermbg=8 guifg=#4FBD65 guibg=black
+" let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 
 " Airline settings
 let g:airline_theme='violet'
