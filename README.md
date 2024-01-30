@@ -1,17 +1,10 @@
 # Vim Setup
 This repository is my own vim setups. Feel free to copy anything if you like or you want to try these settings.
 
-## Vundle
-I use [Vundle](https://github.com/VundleVim/Vundle.vim) as my plugin manager. If you just copy and use my `.vimrc` you have to download Vundle to manage all other plugins.
+## vim-plug
+I use [vim-plug](https://github.com/junegunn/vim-plug) as my plugin manager. If you just copy and use my `.vimrc` you have to download vim-plug to manage all other plugins.
 
-You can follow [their quick start guide](https://github.com/VundleVim/Vundle.vim) to install Vundle. After that run `:PluginInstall` or any other method you learn from their documentation to install all the plugins. Everything should work except YouCompleteMe.
-
-### You Complete Me
-**You Complete Me** is an autocomplete plugin for vim. It require addtional installations.
-
-If you don't want to use it, please remove that line in the `.vimrc`.
-
-I won't tell you how to install it correctly because it's too hard and I don't even know what happened but it just worked. Please follow any other reliable guides you found.
+You can follow [their installation guide](https://github.com/junegunn/vim-plug?tab=readme-ov-file#installation) to install vim-plug (basically just one line of shell command). After that run `:PlugInstall` or any other method you learn from their documentation to install all the plugins.
 
 # Contributing
 Don't open pull request and ruin my setup.
