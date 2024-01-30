@@ -46,6 +46,10 @@ inoremap <C-q> <ESC>:m+<CR>i
 inoremap <C-j> <ESC>:m-2<CR>i
 inoremap {<CR> {<CR>}<ESC>O
 
+" Shortcuts
+ca Yc YcmCompleter
+ca PI PlugInstall
+
 " NERDTree settings
 let NERDTreeShowHidden=1
 
