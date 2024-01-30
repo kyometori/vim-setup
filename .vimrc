@@ -17,31 +17,24 @@ set updatetime=100
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-
-" Add plugins below this line
+call plug#begin('~/.vim/plugins')
 " Function Plugins
-Plugin 'preservim/nerdtree'
-Plugin 'ycm-core/YouCompleteMe'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-surround'
+Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --all' }
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-surround'
+
 " Custom Themes
-Plugin 'sainnhe/everforest'
-
-call vundle#end()
-
-filetype plugin indent on
+Plug 'sainnhe/everforest'
+call plug#end()
 
 " Color Schemes
 set background=dark
 set termguicolors
-colorscheme everforest
+silent! colorscheme everforest
 syntax on
 
 " Key Maps
