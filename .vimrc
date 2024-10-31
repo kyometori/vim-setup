@@ -16,7 +16,6 @@ set updatetime=100
 " Leader Key
 let mapleader = "'"
 
-
 " Vundle Settings
 set nocompatible
 filetype off
@@ -28,6 +27,8 @@ Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --all' }
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
+Plug 'github/copilot.vim'
+Plug 'dstein64/vim-startuptime', { 'on': 'StartupTime' }
 
 " Custom Themes
 Plug 'sainnhe/everforest'
