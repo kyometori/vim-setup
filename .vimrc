@@ -1,6 +1,8 @@
 " General Settings
-set nu
+set nocompatible
+set nu rnu
 set hlsearch
+set incsearch
 set ruler
 set bg=dark
 set autoindent
@@ -8,17 +10,17 @@ set backspace=2
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set number relativenumber
 set path=.,/usr/include,,**
 set encoding=UTF-8
 set updatetime=100
+set showcmd
+set showmatch
+set matchtime=2
+set list listchars=eol:¬,tab:▸\ ,trail:.,
+set shiftround
 
 " Leader Key
-let mapleader = "'"
-
-" Vundle Settings
-set nocompatible
-filetype off
+let mapleader = ";"
 
 call plug#begin('~/.vim/plugins')
 " Function Plugins
@@ -33,6 +35,8 @@ Plug 'dstein64/vim-startuptime', { 'on': 'StartupTime' }
 " Custom Themes
 Plug 'sainnhe/everforest'
 call plug#end()
+
+filetype plugin indent on
 
 " Color Schemes
 set background=dark
