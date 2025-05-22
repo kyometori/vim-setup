@@ -12,7 +12,7 @@ set shiftwidth=2
 set expandtab
 set path=.,/usr/include,,**
 set encoding=UTF-8
-set updatetime=100
+set updatetime=750
 set showcmd
 set sloc=statusline
 set showmatch
