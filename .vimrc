@@ -14,6 +14,7 @@ set path=.,/usr/include,,**
 set encoding=UTF-8
 set updatetime=100
 set showcmd
+set sloc=statusline
 set showmatch
 set matchtime=2
 set list listchars=eol:¬,tab:▸\ ,trail:.,
@@ -104,6 +105,8 @@ set statusline+=\
 set statusline+=%r " Readonly flag
 set statusline+=%f " Filename
 set statusline+=%m " Modified flag
+set statusline+=\ 
+set statusline+=%S " sloc
 set statusline+=%=
 set statusline+=%y " Filetype
 set statusline+=\ 
