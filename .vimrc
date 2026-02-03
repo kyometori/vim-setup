@@ -30,8 +30,9 @@ Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --all' }
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
 Plug 'dstein64/vim-startuptime', { 'on': 'StartupTime' }
+Plug 'tommcdo/vim-exchange', { 'on': 'Exchange' }
 
 " Custom Themes
 Plug 'sainnhe/everforest'
@@ -57,6 +58,35 @@ nnoremap <C-j> :m-2<CR>
 inoremap <C-q> <ESC>:m+<CR>i
 inoremap <C-j> <ESC>:m-2<CR>i
 inoremap {<CR> {<CR>}<ESC>O
+
+" Mark Enhancement
+function s:SelectMark(command)
+  execute "marks"
+  echohl Question
+  echo "Enter mark (ESC to cancel): "
+  echohl NONE
+  let mark = nr2char(getchar())
+  redraw
+  if mark !=# "\e"
+    try
+      if mode("v:true") ==? "v" && line("'" .. mark) ==# 0
+        throw "E20: Mark not set"
+      endif
+      execute "normal! " .. a:command .. mark
+    catch
+      echohl ErrorMsg
+      echo substitute(v:exception, "^Vim(.*):", "", "")
+      echohl NONE
+    endtry
+  endif
+endfunction
+
+nnoremap ' <Cmd>call <SID>SelectMark("'")<CR>
+nnoremap ` <Cmd>call <SID>SelectMark("`")<CR>
+
+xnoremap ' <Cmd>call <SID>SelectMark("'")<CR>
+xnoremap ` <Cmd>call <SID>SelectMark("`")<CR>
+
 
 " Shortcuts
 ca Yc YcmCompleter
