@@ -37,6 +37,7 @@ Plug 'lervag/vimtex', { 'for': 'tex' }
 
 " Custom Themes
 Plug 'sainnhe/everforest'
+Plug 'catppuccin/vim', { 'as': 'catppuccin', 'branch': 'main' }
 call plug#end()
 
 filetype plugin indent on
@@ -46,9 +47,9 @@ set background=dark
 if has('termguicolors')
   set termguicolors
 endif
-let g:everforest_background = 'hard'
-let g:everforest_better_performance = 1
-silent! colorscheme everforest
+" let g:everforest_background = 'hard'
+" let g:everforest_better_performance = 1
+silent! colorscheme catppuccin
 syntax on
 
 " Key Maps
