@@ -131,7 +131,7 @@ set statusline+=%#ModeNormalColor#%{mode()=='t'?'\ \ TERMINAL\ ':''}
 set statusline+=%#ModeNormalColor#%{mode()=='c'?'\ \ COMMAND\ ':''}
 set statusline+=%#ModeNormalColor#%{mode()=='!'?'\ \ SHELL\ ':''}
 set statusline+=%2*
-set statusline+=%{b:gitbranch}
+set statusline+=%{get(b:,'gitbranch','')}
 set statusline+=%3*
 set statusline+=\ 
 set statusline+=%r " Readonly flag
@@ -173,11 +173,12 @@ function! StatuslineGitBranch()
   if &modifiable
     try
       let l:dir=expand('%:p:h')
-      let l:gitrevparse = system("git -C ".l:dir." rev-parse --abbrev-ref HEAD")
+      let l:gitrevparse = system("git -C ".shellescape(l:dir)." rev-parse --abbrev-ref HEAD")
       if !v:shell_error
         let b:gitbranch="  ".substitute(l:gitrevparse, '\n', '', 'g')." "
       endif
     catch
+      let b:gitbranch = ""
     endtry
   endif
 endfunction
