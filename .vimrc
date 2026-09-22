@@ -1,24 +1,48 @@
 " General Settings
 set nocompatible
-set nu rnu
-set hlsearch
-set incsearch
-set ruler
-set bg=dark
+set encoding=UTF-8
+set hidden
 set autoindent
 set backspace=2
+
+set nu rnu
+set ruler
+set showcmd
+set sloc=statusline
+set signcolumn=yes
+set splitbelow
+set splitright
+
+set scrolloff=6
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set path=.,/usr/include,,**
-set encoding=UTF-8
-set updatetime=750
-set showcmd
-set sloc=statusline
+set shiftround
+
 set showmatch
 set matchtime=2
+set formatoptions-=cro
+
 set list listchars=eol:¬,tab:▸\ ,trail:.,
-set shiftround
+set path=.,/usr/include,,**
+set updatetime=750
+set timeout
+set timeoutlen=400
+
+let s:undo_dir = expand('~/.vim/undo')
+
+if !isdirectory(s:undo_dir)
+  call mkdir(s:undo_dir, 'p')
+endif
+
+let &undodir = s:undo_dir
+set undofile
 
 " Leader Key
 let mapleader = ";"
@@ -50,6 +74,7 @@ if has('termguicolors')
 endif
 " let g:everforest_background = 'hard'
 " let g:everforest_better_performance = 1
+set bg=dark
 silent! colorscheme catppuccin
 syntax on
 
