@@ -30,6 +30,7 @@ Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --all' }
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 " Plug 'github/copilot.vim'
 Plug 'dstein64/vim-startuptime', { 'on': 'StartupTime' }
 Plug 'tommcdo/vim-exchange', { 'on': 'Exchange' }
@@ -54,7 +55,6 @@ syntax on
 
 " Key Maps
 map <silent> <C-n> :NERDTreeToggle<CR>
-map <C-_> I// <ESC>j0
 nnoremap <C-q> :m+<CR>
 nnoremap <C-j> :m-2<CR>
 inoremap <C-q> <ESC>:m+<CR>i
