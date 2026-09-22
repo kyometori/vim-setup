@@ -131,7 +131,7 @@ set statusline+=%#ModeNormalColor#%{mode()=='t'?'\ \ TERMINAL\ ':''}
 set statusline+=%#ModeNormalColor#%{mode()=='c'?'\ \ COMMAND\ ':''}
 set statusline+=%#ModeNormalColor#%{mode()=='!'?'\ \ SHELL\ ':''}
 set statusline+=%2*
-set statusline+=%{get(b:,'gitbranch','')}
+set statusline+=\ %{FugitiveHead()}\ 
 set statusline+=%3*
 set statusline+=\ 
 set statusline+=%r " Readonly flag
@@ -167,21 +167,3 @@ hi ModeNormalColor ctermbg=magenta ctermfg=lightgray guibg=#8A6ABA guifg=#C0C0C0
 hi ModeInsertColor ctermbg=magenta ctermfg=lightgray guibg=#227D54 guifg=#C0C0C0
 hi ModeReplaceColor ctermbg=magenta ctermfg=lightgray guibg=#A74464 guifg=#C0C0C0
 hi ModeVisualColor ctermbg=magenta ctermfg=lightgray guibg=#CF4E8E guifg=#C0C0C0
-
-function! StatuslineGitBranch()
-  let b:gitbranch=""
-  if &modifiable
-    try
-      let l:dir=expand('%:p:h')
-      let l:gitrevparse = system("git -C ".shellescape(l:dir)." rev-parse --abbrev-ref HEAD")
-      if !v:shell_error
-        let b:gitbranch="  ".substitute(l:gitrevparse, '\n', '', 'g')." "
-      endif
-    catch
-      let b:gitbranch = ""
-    endtry
-  endif
-endfunction
-
-au! BufEnter * call StatuslineGitBranch()
-
