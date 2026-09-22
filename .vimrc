@@ -33,7 +33,7 @@ Plug 'tpope/vim-surround'
 " Plug 'github/copilot.vim'
 Plug 'dstein64/vim-startuptime', { 'on': 'StartupTime' }
 Plug 'tommcdo/vim-exchange', { 'on': 'Exchange' }
-Plug 'lervag/vimtex', { 'for': 'tex' }
+Plug 'lervag/vimtex'
 
 " Custom Themes
 Plug 'sainnhe/everforest'
