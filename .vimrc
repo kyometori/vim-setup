@@ -50,6 +50,7 @@ let mapleader = ";"
 call plug#begin('~/.vim/plugins')
 " Function Plugins
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'preservim/vim-indent-guides', { 'on': ['IndentGuidesEnable', 'IndentGuidesToggle'] }
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --all' }
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -58,10 +59,11 @@ Plug 'tpope/vim-commentary'
 " Plug 'github/copilot.vim'
 Plug 'dstein64/vim-startuptime', { 'on': 'StartupTime' }
 Plug 'tommcdo/vim-exchange', { 'on': 'Exchange' }
+Plug 'yegappan/number-puzzle', { 'on': 'NumberPuzzle' }
 Plug 'lervag/vimtex'
 
 " Custom Themes
-Plug 'sainnhe/everforest'
+" Plug 'sainnhe/everforest'
 Plug 'catppuccin/vim', { 'as': 'catppuccin', 'branch': 'main' }
 call plug#end()
 
@@ -77,6 +79,11 @@ endif
 set bg=dark
 silent! colorscheme catppuccin
 syntax on
+
+" let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#1e1e2e   ctermbg=53
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#181825 ctermbg=89
 
 " Key Maps
 map <silent> <C-n> :NERDTreeToggle<CR>
@@ -126,9 +133,9 @@ let NERDTreeShowHidden=1
 set completeopt=menu,menuone
 let g:ycm_add_preview_to_completeopt = 0
 let g:ycm_semantic_triggers =  {
-			\ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
-			\ 'cs,lua,javascript': ['re!\w{2}'],
-			\ }
+      \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
+      \ 'cs,lua,javascript': ['re!\w{2}'],
+      \ }
 highlight PMenu ctermfg=0 ctermbg=10 guifg=black guibg=#4FBD65
 highlight PMenuSel ctermfg=10 ctermbg=8 guifg=#4FBD65 guibg=black
 " let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
