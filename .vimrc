@@ -61,6 +61,7 @@ Plug 'dstein64/vim-startuptime', { 'on': 'StartupTime' }
 Plug 'tommcdo/vim-exchange', { 'on': 'Exchange' }
 Plug 'yegappan/number-puzzle', { 'on': 'NumberPuzzle' }
 Plug 'lervag/vimtex'
+Plug 'easymotion/vim-easymotion'
 
 " Custom Themes
 " Plug 'sainnhe/everforest'
@@ -84,6 +85,13 @@ syntax on
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#1e1e2e   ctermbg=53
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#181825 ctermbg=89
+
+" Easy Motion Settings
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+nmap s <Plug>(easymotion-overwin-f2)
+let g:EasyMotion_smartcase = 1
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
 
 " Key Maps
 map <silent> <C-n> :NERDTreeToggle<CR>
